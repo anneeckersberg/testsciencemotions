@@ -26,6 +26,117 @@ svg {
     left: -15px;
 }
 
+.outer-cell {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    background: transparent;
+    border: 3px solid brown;    
+}
+.shape2 {
+    position: relative;
+    margin: auto;
+    display: block;
+    height: 200px;
+    width: 200px;
+    background: none;
+}
+.smallCircle{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: pink;
+    left: 25%;
+    top: 25%;
+    border-radius: 50%;
+    border: 3px solid darkred;
+ 
+ }
+ .smallCircle::before{
+     content: "";
+     position: absolute;
+     border-radius: 50%;
+     border: 1px solid red;
+     top: 20px;
+     width: 8px;
+     height:8px;
+     background: red;
+     box-shadow: 
+     22px 10px 0 0 red,
+     -10px 18px 0 0 red,
+     57px 25px 0 0 red,
+     27px -13px 0 0 red,
+     20px 25px 0 0 red,
+     45px -13px 0 0 red,
+     45px 5px 0 0 red;    
+     left: 20px;  
+     animation-name: floating;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+     animation-timing-function: ease-in-out;
+   
+ }
+ .smallCircle::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid red;
+    top: 50px;
+    width: 8px;
+    height:8px;
+    background: red;
+    left: 20px;    
+    -webkit-animation: floating  
+    cubic-bezier(0.42, 0.66, 0.66, 0.14) infinite;
+    animation: floating 20s
+    cubic-bezier(0.42, 0.66, 0.66, 0.14) infinite;
+
+}
+
+@keyframes floating {
+    100% { 
+        box-shadow: 
+        55px 10px 0 0 red,
+        35px 5px 0 0 red,
+        15px 22px 0 0 red,    
+        -10px 18px 0 0 red,
+        35px 34px 0 0 red,
+        15px 12px 0 0 red,    
+        -10px 10px 0 0 red,
+        20px 38px 0 0 red;    
+    
+     }
+     20% { 
+        box-shadow: 
+        8px 10px 0 0 red,
+        27px 5px 0 0 red,
+        27px 22px 0 0 red,
+        -10px 18px 0 0 red,    
+        8px 10px 0 0 red,
+        27px 5px 0 0 red,
+        27px 22px 0 0 red,
+        50px 18px 0 0 red,     
+        40px 8px 0 0 red;    
+
+    
+     }
+     0% { 
+        box-shadow: 
+        8px 10px 0 0 red,
+        27px 5px 0 0 red,
+        27px 22px 0 0 red,
+        50px 18px 0 0 red,     
+        8px 10px 0 0 red,
+        27px 5px 0 0 red,
+        27px 22px 0 0 red,
+        50px 18px 0 0 red,     
+        40px 8px 0 0 red;        
+     }
+
+}
+
+
 
     /*-webkit-transform-origin: 0 100%;
     -moz-transform-origin: 0 100%;
