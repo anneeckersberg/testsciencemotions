@@ -1,0 +1,39 @@
+body {
+    display: block;
+}
+
+.organelle-container {
+    display: inline-block;
+    margin: 0 auto;
+    width: 250px;
+}
+
+.shape1 {
+    position: relative;
+    width: 50px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100px 100px 100px 100px;
+    background-color: orange;
+    border-style: double;
+    border-color: white;
+}
+
+svg {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 15px;
+    left: -15px;
+}
+
+
+    /*-webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);*/
