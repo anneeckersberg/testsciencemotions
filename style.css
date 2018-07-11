@@ -1,127 +1,130 @@
 body {
-    display: block;
+  display: block;
 }
 
 .cell {
-    position: relative;
-    margin: 0 auto;
-    border-radius: 50%;
-    border: 3px solid brown;
-    background: transparent;
-    width: 300px;
-    height: 300px; 
+  position: relative;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid brown;
+  background: transparent;
+  width: 300px;
+  height: 300px;
 }
 
 .shape1 {
-    position: absolute;
-    margin: 0 auto;
-    transform: rotate(45deg);
-    border-radius: 100px 100px 100px 100px;
-    border: double white;
-    background-color: orange;
-    width: 50px;
-    height: 100px;
-    top: 10px;
-    left: 70px;
-    
+  position: absolute;
+  margin: 0 auto;
+  transform: rotate(45deg);
+  border-radius: 100px 100px 100px 100px;
+  border: double white;
+  background-color: orange;
+  width: 50px;
+  height: 100px;
+  top: 10px;
+  left: 70px;
 }
 
 .shape1 svg {
-    position: absolute;
-    margin: 0 auto;
-    transform: rotate(90deg);
-    top: 15px;
-    left: -15px;
+  position: absolute;
+  margin: 0 auto;
+  transform: rotate(90deg);
+  top: 15px;
+  left: -15px;
 }
 
 .shape2 {
-    position: absolute;
-    margin: 0 auto;
-    background: none;
-    width: 200px;
-    height: 200px;
-    top: 30px;
-    left: 80px;
+  position: absolute;
+  margin: 0 auto;
+  background: none;
+  width: 150px;
+  height: 150px;
+  top: 30px;
+  left: 80px;
 }
 
 .shape3 svg {
-    position: absolute;
-    margin: 0 auto;
-    background: none;
-    right: 10px;
-    top: 200px;
+  position: absolute;
+  margin: 0 auto;
+  background: none;
+  right: 10px;
+  top: 200px;
 }
 
 .shape4 svg {
-    position: absolute;
-    margin: 0 auto;
-    transform: rotate(80deg);
-    left: 130px;
-    top: 70px;
+  position: absolute;
+  margin: 0 auto;
+  transform: rotate(80deg);
+  left: 130px;
+  top: 70px;
+}
+svg circle {
+  border: 1px solid red;
 }
 
 .smallCircle {
-    position: absolute;
-    margin: 0 auto;
-    border-radius: 50%;
-    border: 3px solid darkred;
-    background: pink;
-    width: 50%;
-    height: 50%;
-    left: 25%;
-    top: 25%;
+  position: absolute;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 0, 0, .2);
+  background: pink;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  top: 25%;
 }
 
 .smallCircle::before {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid red;
-    top: 20px;
-    width: 8px;
-    height: 8px;
-    background: red;
-    box-shadow: 22px 10px 0 0 red, -10px 18px 0 0 red, 57px 25px 0 0 red, 27px -13px 0 0 red, 20px 25px 0 0 red, 45px -13px 0 0 red, 45px 5px 0 0 red;
-    left: 20px;
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  background: red;
+  box-shadow: 22px 10px 0 0 red, 
+  -10px 18px 0 0 red, 
+  20px 25px 0 0 red,
+  15px -13px 0 0 red, 
+  20px 25px 0 0 red, 
+  18px -13px 0 0 red, 
+  10px 5px 0 0 red;
+  left: 13px;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out infinite;
 }
 
 .smallCircle::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid red;
-    top: 50px;
-    width: 8px;
-    height: 8px;
-    background: red;
-    left: 20px;
-    -webkit-animation: floating cubic-bezier(0.42, 0.66, 0.66, 0.14) infinite;
-    animation: floating 20s cubic-bezier(0.42, 0.66, 0.66, 0.14) infinite;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid red;
+  top: 29px;
+  width: 8px;
+  height: 8px;
+  background: red;
+  left: 20px;
+  -webkit-animation: floating cubic-bezier(0.1, 0.1, 0.2, 0.1) infinite;
+  animation: floating 20s cubic-bezier(0.1, 0.1, 0.2, 0.1) infinite;
 }
 
 @keyframes floating {
-    100% {
-        box-shadow: 55px 10px 0 0 red, 35px 5px 0 0 red, 15px 22px 0 0 red, -10px 18px 0 0 red, 35px 34px 0 0 red, 15px 12px 0 0 red, -10px 10px 0 0 red, 20px 38px 0 0 red;
-    }
-    20% {
-        box-shadow: 8px 10px 0 0 red, 27px 5px 0 0 red, 27px 22px 0 0 red, -10px 18px 0 0 red, 8px 10px 0 0 red, 27px 5px 0 0 red, 27px 22px 0 0 red, 50px 18px 0 0 red, 40px 8px 0 0 red;
-    }
-    0% {
-        box-shadow: 8px 10px 0 0 red, 27px 5px 0 0 red, 27px 22px 0 0 red, 50px 18px 0 0 red, 8px 10px 0 0 red, 27px 5px 0 0 red, 27px 22px 0 0 red, 50px 18px 0 0 red, 40px 8px 0 0 red;
-    }
+  100% {
+    box-shadow: 55px 10px 0 0 red, 
+    35px 5px 0 0 red, 
+    15px 22px 0 0 red,
+    -10px 18px 0 0 red, 
+    35px 34px 0 0 red, 
+  }
+  20% {
+    box-shadow: 8px 10px 0 0 red, 27px 5px 0 0 red, 27px 22px 0 0 red,
+      -10px 18px 0 0 red, 8px 10px 0 0 red, 27px 5px 0 0 red;
+  }
+  0% {
+    box-shadow: 8px 10px 0 0 red, 27px 5px 0 0 red, 27px 22px 0 0 red,
+      50px 18px 0 0 red, 8px 10px 0 0 red, 27px 5px 0 0 red;
+     ;
+  }
 }
-
-/*-webkit-transform-origin: 0 100%;
-    -moz-transform-origin: 0 100%;
-    -ms-transform-origin: 0 100%;
-    -o-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);*/
