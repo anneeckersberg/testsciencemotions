@@ -18,9 +18,12 @@ body {
   animation: fadeIn 5s forwards;
   animation-delay: 3s;
   opacity: 0;
-  background: rgba(95, 158, 160, 0.425);
+  background: #136a8a;
+  background: -webkit-radial-gradient(#5c807d75, #083e526c);
+  background: radial-gradient(#5c807d75, #083e526c), radial-gradient(transparent, rgba(0, 0, 0, 0.4));
   height: 300px;
   width: 300px;
+  z-index: 1;
 }
 
 @keyframes fadeIn {
@@ -29,7 +32,7 @@ body {
     }
 }
 
-.shape1 {
+.mitochondria {
   position: absolute;
   margin: 0 auto;
   transform: rotate(45deg);
@@ -42,7 +45,11 @@ body {
   left: 70px;
 }
 
-.shape1 svg {
+.mitochondria, .lysosome, .cytoskeleton-green svg, .cytoskeleton-red svg, .nucleus {
+    z-index: 2;
+}
+
+.mitochondria svg {
   position: absolute;
   margin: 0 auto;
   transform: rotate(90deg);
@@ -50,7 +57,7 @@ body {
   left: -15px;
 }
 
-.shape2 {
+.lysosome-box {
   position: absolute;
   margin: 0 auto;
   background: none;
@@ -60,7 +67,7 @@ body {
   left: 80px;
 }
 
-.shape3 svg {
+.cytoskeleton-green svg {
   position: absolute;
   margin: 0 auto;
   background: none;
@@ -68,18 +75,15 @@ body {
   top: 200px;
 }
 
-.shape4 svg {
+.cytoskeleton-red svg {
   position: absolute;
   margin: 0 auto;
   transform: rotate(80deg);
   left: 130px;
   top: 70px;
 }
-svg circle {
-  border: 1px solid red;
-}
 
-.smallCircle {
+.lysosome {
   position: absolute;
   margin: 0 auto;
   border-radius: 50%;
@@ -91,7 +95,7 @@ svg circle {
   top: 25%;
 }
 
-.smallCircle::before {
+.lysosome::before {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -113,7 +117,7 @@ svg circle {
   animation-timing-function: ease-in-out infinite;
 }
 
-.smallCircle::after {
+.lysosome::after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -145,3 +149,15 @@ svg circle {
      ;
   }
 }
+
+.nucleus {
+    position: absolute;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 0, 0, .2);
+    background: lightsalmon;
+    width: 40%;
+    height: 40%;
+    left: 20%;
+    top: 10%;
+  }
