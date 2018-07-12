@@ -15,14 +15,15 @@ body {
   position: absolute;
   border-radius: 50%;
   border: 3px solid brown;
-  animation: anne 5s forwards;
+  animation: fadeIn 5s forwards;
   animation-delay: 3s;
   opacity: 0;
+  background: rgba(95, 158, 160, 0.425);
   height: 300px;
   width: 300px;
 }
 
-@keyframes anne {
+@keyframes fadeIn {
     100% {
         opacity:1;
     }
