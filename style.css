@@ -5,18 +5,34 @@ body {
 .cell {
   position: relative;
   margin: 0 auto;
-  border-radius: 50%;
-  border: 3px solid brown;
   background: transparent;
   width: 300px;
   height: 300px;
+}
+
+.cell::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid brown;
+  animation: anne 5s forwards;
+  animation-delay: 3s;
+  opacity: 0;
+  height: 300px;
+  width: 300px;
+}
+
+@keyframes anne {
+    100% {
+        opacity:1;
+    }
 }
 
 .shape1 {
   position: absolute;
   margin: 0 auto;
   transform: rotate(45deg);
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 100px;
   border: double white;
   background-color: orange;
   width: 50px;
