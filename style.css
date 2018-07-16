@@ -4,8 +4,8 @@ body {
 
 #cell-clone{
     position: relative;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     left: 20px;
 }
 
@@ -14,22 +14,22 @@ body {
   position: absolute;
   margin: 0 auto;
   background: transparent;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 .cell::after {
   content: "";
   position: absolute;
   border-radius: 50%;
-  border: 3px solid brown;
+  border: 3px solid lightgray;
 /*  animation: fadeIn 5s forwards;
   animation-delay: 3s; */
-  background: #136a8a;
-  background: -webkit-radial-gradient(#5c807d75, #083e526c);
-  background: radial-gradient(#5c807d75, #083e526c), radial-gradient(transparent, rgba(0, 0, 0, 0.4));
-  height: 300px;
-  width: 300px;
+  background: blue;
+  background: -webkit-radial-gradient(#73a4ee75, #0742996c);
+  background: radial-gradient(#73a4ee75, #0742996c), radial-gradient(transparent, rgba(0, 0, 0, 0.4));
+  height: 400px;
+  width: 400px;
   z-index: 1;
 }
 
@@ -39,6 +39,18 @@ body {
     }
 }
 
+.nucleus {
+  position: absolute;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 0, 0, .2);
+  background: rgb(131, 58, 131);
+  width: 40%;
+  height: 40%;
+  left: 20%;
+  top: 10%;
+}
+
 .mitochondria {
   position: absolute;
   margin: 0 auto;
@@ -46,22 +58,21 @@ body {
   border-radius: 100px;
   border: double white;
   background-color: orange;
-  width: 50px;
-  height: 100px;
-  top: 10px;
-  left: 70px;
-}
-
-.mitochondria, .lysosome, .cytoskeleton-green svg, .cytoskeleton-red svg, .nucleus {
-    z-index: 2;
+  width: 35px;
+  height: 70px;
+  top: 170px;
+  left: 90px;
 }
 
 .mitochondria svg {
   position: absolute;
   margin: 0 auto;
   transform: rotate(90deg);
-  top: 15px;
-  left: -15px;
+  left: -5px;
+}
+
+.mitochondria, .lysosome, .cytoskeleton-green svg, .cytoskeleton-red svg, .nucleus {
+    z-index: 2;
 }
 
 .lysosome-box {
@@ -157,14 +168,4 @@ body {
   }
 }
 
-.nucleus {
-    position: absolute;
-    margin: 0 auto;
-    border-radius: 50%;
-    border: 3px solid rgba(255, 0, 0, .2);
-    background: lightsalmon;
-    width: 40%;
-    height: 40%;
-    left: 20%;
-    top: 10%;
-  }
+
