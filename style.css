@@ -2,11 +2,11 @@ body {
   display: block;
 }
 
-#cell-clone{
-    position: relative;
-    height: 400px;
-    width: 400px;
-    left: 20px;
+#cell-clone {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  left: 20px;
 }
 
 .cell {
@@ -21,46 +21,56 @@ body {
   content: "";
   position: absolute;
   border-radius: 50%;
-  border: 3px solid lightgray;
-/*  animation: fadeIn 5s forwards;
-  animation-delay: 3s; */
+  border: 5px solid #A49480;
+  animation: fadeIn 5s forwards;
+  animation-delay: 3s;
   background: blue;
   background: -webkit-radial-gradient(#73a4ee75, #0742996c);
   background: radial-gradient(#73a4ee75, #0742996c), radial-gradient(transparent, rgba(0, 0, 0, 0.4));
   height: 400px;
   width: 400px;
   z-index: 1;
+  opacity: 0;
 }
 
 @keyframes fadeIn {
-    100% {
-        opacity:1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 .nucleus {
   position: absolute;
   margin: 0 auto;
   border-radius: 50%;
-  border: 3px solid rgba(255, 0, 0, .2);
-  background: rgb(131, 58, 131);
-  width: 40%;
-  height: 40%;
-  left: 20%;
-  top: 10%;
+  border: 3px solid rgba(219, 199, 199);
+  background: rgb(187, 100, 114);
+  width: 30%;
+  height: 30%;
+  left: 29%;
+  top: 20%;
+}
+
+.nucleulus {
+  position: absolute;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 0, 0, .2);
+  background: rgb(116, 61, 61);
+  width: 25%;
+  height: 25%;
+  left: 61%;
+  top: 26%;
 }
 
 .mitochondria {
   position: absolute;
   margin: 0 auto;
-  transform: rotate(45deg);
   border-radius: 100px;
   border: double white;
   background-color: orange;
   width: 35px;
   height: 70px;
-  top: 170px;
-  left: 90px;
 }
 
 .mitochondria svg {
@@ -70,18 +80,25 @@ body {
   left: -5px;
 }
 
-#mito2 {
+#mito1 {
   top: 200px;
+  left: 90px;
+  transform: rotate(60deg);
+}
+
+#mito2 {
+  top: 300px;
   left: 170px;
 }
 
 #mito3 {
-  top: 300px;
-  left: 200px;
+  top: 30px;
+  left: 230px;
+  transform: rotate(100deg)
 }
 
-.mitochondria, .lysosome, .cytoskeleton-green svg, .cytoskeleton-blue svg, .cytoskeleton-blue2 svg, .nucleus {
-    z-index: 2;
+.mitochondria, .lysosome, .cytoskeleton-green svg, .cytoskeleton-blue svg, .cytoskeleton-blue2 svg, .nucleus, .golgi {
+  z-index: 2;
 }
 
 .lysosome-box {
@@ -95,37 +112,41 @@ body {
 }
 
 #box1 {
-    top: 250px;
-    left: 240px;
-  }
+  top: 250px;
+  left: 240px;
+}
 
 #box2 {
-    top: 249px;
-    left: 72px;
-  }
-  
+  top: 249px;
+  left: 72px;
+}
 
 .cytoskeleton-green svg {
   position: absolute;
   margin: 0 auto;
 }
 
-.cyto2 {
+.cytogreen1 {
+  transform: rotate(15deg);
+}
+
+.cytogreen3 {
   transform: rotate(30deg);
 }
 
 .cytoskeleton-blue svg {
   position: absolute;
   margin: 0 auto;
-  top: 100px;
-  left: 170px;
+  top: 150px;
+  left: 220px;
 }
 
 .cytoskeleton-blue2 svg {
   position: absolute;
   margin: 0 auto;
-  top: 200px;
-  left: 150px;
+  top: 230px;
+  left: 0px;
+  transform: scale(.6);
 }
 
 .lysosome {
@@ -148,62 +169,41 @@ body {
   width: 2px;
   height: 2px;
   background: red;
-  box-shadow: 
-  -7px 5px 0 0 red, 
-  0px 8px 0 0 red, 
-  15px -1px 0 0 red, 
-  -9px 12px 0 0 red, 
-  5px -1px 0 0 red, 
-  2px 15px 0 0 red, 
-  11px 8px 0 0 red, 
-  2px -8px 0 0 red;
+  box-shadow: -7px 5px 0 0 red, 0px 8px 0 0 red, 15px -1px 0 0 red, -9px 12px 0 0 red, 5px -1px 0 0 red, 2px 15px 0 0 red, 11px 8px 0 0 red, 2px -8px 0 0 red;
   left: 13px;
-  animation-name: floating; 
+  animation-name: floating;
   animation-duration: 3s;
-animation-iteration-count: infinite;
-
+  animation-iteration-count: infinite;
 }
-/*
-.lysosome::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid red;
-  top: 29px;
-  width: 2px;
-  height: 2px;
-  background: red;
-  left: 10px;
-  -webkit-animation: floating cubic-bezier(0.1, 0.1, 0.2, 0.1) infinite;
-  animation: floating 20s cubic-bezier(0.1, 0.1, 0.2, 0.1) infinite;
-}
-*/
 
 @keyframes floating {
   100% {
-    box-shadow: 55px 10px 0 0 red, 
-    5px 5px 0 0 red, 
-    15px 22px 0 0 red,
-    -10px 18px 0 0 red, 
-    35px 34px 0 0 red, 
+    box-shadow: 55px 10px 0 0 red, 5px 5px 0 0 red, 15px 22px 0 0 red, -10px 18px 0 0 red, 35px 34px 0 0 red,
   }
   20% {
-    box-shadow: 8px 10px 0 0 red, 
-    7px 5px 0 0 red, 
-    10px 2px 0 0 red,
-    -10px 8px 0 0 red, 
-    8px 6px 0 0 red, 
-    4px 5px 0 0 red;
+    box-shadow: 8px 10px 0 0 red, 7px 5px 0 0 red, 10px 2px 0 0 red, -10px 8px 0 0 red, 8px 6px 0 0 red, 4px 5px 0 0 red;
   }
   0% {
-    box-shadow: 8px 10px 0 0 red, 
-    8px 5px 0 0 red, 
-    7px 9px 0 0 red,
-      2px 3px 0 0 red,
-      6px 5px 0 0 red, 
-      12px 7px 0 0 red;
-     ;
+    box-shadow: 8px 10px 0 0 red, 8px 5px 0 0 red, 7px 9px 0 0 red, 2px 3px 0 0 red, 6px 5px 0 0 red, 12px 7px 0 0 red;
+    ;
   }
 }
 
-
+.golgi {
+  position: absolute;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgb(100, 100, 100);
+  width: 2%;
+  height: 2%;
+  left: 25%;
+  top: 25%;
+  box-shadow: 4px 15px 0 0 rgb(100, 100, 100), 
+  120px 120px 0 0 rgb(100, 100, 100), 
+  150px 15px 0 0 rgb(100, 100, 100), 
+  150px 40px 0 0 rgb(100, 100, 100), 
+  200px 150px 0 0 rgb(100, 100, 100), 
+  2px 80px 0 0 rgb(100, 100, 100), 
+  100px 190px 0 0 rgb(100, 100, 100), 
+  170px 10px 0 0 rgb(100, 100, 100);
+}
