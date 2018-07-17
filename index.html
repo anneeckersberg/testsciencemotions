@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Eye</title>
+    <title>Cells, Tissues &amp; Organs</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Nova+Round' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
@@ -25,6 +25,9 @@
     <link rel='icon' type='image/png' , sizes='32x32' , href='/images/favicons/favicon-32x32.png'>
     <link rel='icon' type='image/png' , sizes='96x96' , href='/images/favicons/favicon-96x96.png'>
     <link rel='icon' type='image/png' , sizes='16x16' , href='/images/favicons/favicon-16x16.png'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/lib/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="scripts/oakley.js"></script>
 
 </head>
 
@@ -50,30 +53,66 @@
     <section id="top">
         <p>Visual element here, no text. Background color dependent on content.</p>
         <div class="container">
-            <div class="col-xs-1 col-lg-6" style="background-color: #ffff00">
-                <div class="cell">
+            <div id="cell-clone" class="col-xs-1 col-lg-6">
+                <div id="click" class="cell">
+                    <div class="nucleus">
+                        <div class="nucleulus"></div>
+                    </div>
                     <div class="organelle-container">
-                        <div class="shape1">
-                            <svg width="90" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5,50 Q5,35 20,27 T30,35 t10,5 10,5 t10,5 20,5" fill="none" stroke=#EE7600 stroke-width="4" />
+                        <div class="mitochondria" id="mito1">
+                            <svg width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10,50 Q10,35 20,30 T30,35 t10,5 10,5 t5,5 15,5" fill="none" stroke=#EE7600 stroke-width="4" />
                             </svg>
                         </div>
-                        <div class="shape2">
-                            <div class="smallCircle"></div>
-                            
+
+                        <div class="mitochondria" id="mito2">
+                                <svg width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10,50 Q10,35 20,30 T30,35 t10,5 10,5 t5,5 15,5" fill="none" stroke=#EE7600 stroke-width="4" />
+                                </svg>
+                            </div>
+
+                        <div class="mitochondria" id="mito3">
+                                <svg width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10,50 Q10,35 20,30 T30,35 t10,5 10,5 t5,5 15,5" fill="none" stroke=#EE7600 stroke-width="4" />
+                                </svg>
+                            </div>
+
+                        <div class="lysosome-box">
+                            <div class="lysosome"></div>    
                         </div>
-                        <div class="shape3">
-                            <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 10 H 110" stroke="green" fill="transparent" stroke-width="3" />
-                                <path d="M10 15 H 110" stroke="green" fill="transparent" stroke-width="3" />
+
+                        <div class="lysosome-box" id="box1">
+                            <div class="lysosome"></div>    
+                        </div>
+                        <div class="lysosome-box" id="box2">
+                            <div class="lysosome"></div>    
+                        </div>
+
+                        <div class="cytoskeleton-green">
+                            <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                                <path class="cytogreen1" d="M65 180 H 130" stroke="green" fill="transparent" stroke-width="3" />
+                                <path class="cytogreen1" d="M65 185 H 130" stroke="green" fill="transparent" stroke-width="3" />
+                                <path class="cytogreen2" d="M200 250 H 280" stroke="green" fill="transparent" stroke-width="3" />
+                                <path class="cytogreen2" d="M200 255 H 280" stroke="green" fill="transparent" stroke-width="3" />
+                                <path class="cytogreen3" d="M260 90 V 150" stroke="green" fill="transparent" stroke-width="3" />
+                                <path class="cytogreen3" d="M265 90 V 150" stroke="green" fill="transparent" stroke-width="3" />
                             </svg>
                         </div>
-                        <div class="shape4">
-                            <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M40 30 Q 52.5 10, 95 50 T 160 80" stroke="red" fill="transparent" stroke-width="6" />
-                                <path d="M30 50 Q 42.5 30, 85 60 T 120 100" stroke="red" fill="transparent" stroke-width="6" />
+
+                        <div class="cytoskeleton-blue">
+                            <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M40 30 Q 52.5 10, 95 50 T 130 80" stroke="blue" fill="transparent" stroke-width="4" />
+                                <path d="M30 50 Q 42.5 30, 85 60 T 120 100" stroke="blue" fill="transparent" stroke-width="4" />
                             </svg>
                         </div>
+
+                        <div class="cytoskeleton-blue2">
+                                <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M40 30 Q 52.5 10, 95 50 T 130 80" stroke="blue" fill="transparent" stroke-width="4" />
+                                    <path d="M30 50 Q 42.5 30, 85 60 T 120 100" stroke="blue" fill="transparent" stroke-width="4" />
+                                </svg>
+                            </div>
+                        <div class="golgi"></div>
                     </div>
                 </div>
             
@@ -108,10 +147,11 @@
         </div>
     </section>
 
+    <script>
+    </script>
+
     <!-- End Site Content -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="scripts/lib/jquery-1.9.1.min.js"><\/script>')</script>
-    <script src="scripts/oakley.js"></script>
+<script src="main.js"></script>
 </body>
 
 </html>
