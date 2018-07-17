@@ -83,21 +83,40 @@ body {
 #mito1 {
   top: 200px;
   left: 90px;
-  transform: rotate(60deg);
+  animation: float1 35s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes float1 {
+  from { transform: rotate(60deg) translateX(60px) rotate(60deg); }
+  to   { transform: rotate(300deg) translateX(60px) rotate(-360deg); }
 }
 
 #mito2 {
-  top: 300px;
-  left: 170px;
+  top: 170px;
+  left: 200px;
+  animation: float2 30s ease-in-out infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes float2 {
+  from { transform: rotate(60deg) translateX(60px) rotate(40deg); }
+  to   { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
 }
 
 #mito3 {
-  top: 30px;
+  top: 198px;
   left: 230px;
-  transform: rotate(100deg)
+  animation: float3 38s ease-in-out infinite;
+  animation-direction: alternate;
 }
 
-.mitochondria, .lysosome, .cytoskeleton-green svg, .cytoskeleton-blue svg, .cytoskeleton-blue2 svg, .nucleus, .golgi {
+@keyframes float3 {
+  from { transform: rotate(30deg) translateX(100px) rotate(40deg); }
+  to   { transform: rotate(200deg) translateX(100px) rotate(-360deg); }
+}
+
+.mitochondria, .lysosome-box, .cytoskeleton-green svg, .cytoskeleton-blue svg, .cytoskeleton-blue2 svg, .nucleus, .golgi {
   z-index: 2;
 }
 
@@ -108,17 +127,23 @@ body {
   width: 80px;
   height: 80px;
   top: 108px;
-  left: 284px;
+  left: 123px;
+  animation: float3 15s ease-in-out infinite;
+  animation-direction: alternate-reverse;
 }
 
 #box1 {
-  top: 250px;
-  left: 240px;
+  top: 100px;
+  left: 150px;
+  animation: float2 25s ease-in-out infinite;
+  animation-direction: alternate-reverse;
 }
 
 #box2 {
-  top: 249px;
-  left: 72px;
+  top: 250px;
+  left: 150px;
+  animation: float1 20s ease-in-out infinite;
+  animation-direction: alternate;
 }
 
 .cytoskeleton-green svg {
@@ -206,4 +231,8 @@ body {
   2px 80px 0 0 rgb(100, 100, 100), 
   100px 190px 0 0 rgb(100, 100, 100), 
   170px 10px 0 0 rgb(100, 100, 100);
+  animation: bobble 5s ease-in-out infinite;
+  animation-direction: alternate;
+
 }
+
