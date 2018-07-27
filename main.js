@@ -1,6 +1,11 @@
 $(document).ready(function(){
+    //$(".cell").click(function)
+    //$( ".cell" ).toggle( "scale",{percent:80}, 2000);
         //$(".cell").fadeOut(3000);
     });
+
+    
+
 
     function makeCell() {
         var divsize = 50;
@@ -22,5 +27,6 @@ $(document).ready(function(){
             
         }           
     }
-    
- setTimeout( multiplyCell, 1000 );
+
+setTimeout( multiplyCell, 10000 );
+

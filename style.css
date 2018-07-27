@@ -26,25 +26,43 @@ body {
   position: absolute;
   border-radius: 50%;
   border: 5px solid #A49480;
-  animation: fadeIn 3s linear 5s 1 forwards;
+  animation: fadeIn 3s forwards;
   animation-delay: 3s;
   background: blue;
   background: -webkit-radial-gradient(#73a4ee75, #0742996c);
   background: radial-gradient(#73a4ee75, #0742996c), radial-gradient(transparent, rgba(0, 0, 0, 0.4));
   height: 400px;
   width: 400px;
-  z-index: -1;
   opacity: 0;
-  transform: scale(1);
+  z-index: -1;
 }
 
 @keyframes fadeIn {
-  0% {
-    transform: scale(1); opacity: 0;
+  75% {
+    transform: scale(1);
   }
 
   100% {
-    transform: scale(.5); opacity: 1; z-index: 1;
+    transform: scale(.1);
+    opacity: 1;
+  }
+}
+
+.organelle-container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  animation: scale 3s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes scale {
+  75% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(.1);
   }
 }
 
