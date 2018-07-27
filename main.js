@@ -11,9 +11,9 @@ $(document).ready(function(){
         var divsize = 50;
         var posx = (Math.random() * ($(".tissue-container").width() - divsize)).toFixed();
         var posy = (Math.random() * ($(".tissue-container").height() - divsize)).toFixed();
-        $newCell = $("<div class=cell-clone></div>").css({
+        $newCell = $(".cell:first").clone().css({
             'left': posx + 'px',
-            'top': posy + 'px'
+            'top': posy + 'px',
         });
         
         $newCell.appendTo('.tissue-container');
