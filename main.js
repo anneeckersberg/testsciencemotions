@@ -11,9 +11,16 @@ $(document).ready(function(){
             'top': posy + 'px'
         });
         
-        console.log("newCell", $newCell);
-
         $newCell.appendTo('.tissue-container');
 
     }
-
+    function multiplyCell(){
+        for(var i = 0; i < 10; i++){
+            setTimeout(function timer(){
+                makeCell();
+            }, i * 1000);
+            
+        }           
+    }
+    
+ setTimeout( multiplyCell, 1000 );
