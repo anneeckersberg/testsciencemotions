@@ -2,23 +2,18 @@ $(document).ready(function(){
         //$(".cell").fadeOut(3000);
     });
 
-    
-    setInterval(
-    function makeDiv() {
+    function makeCell() {
         var divsize = 50;
         var posx = (Math.random() * ($(".tissue-container").width() - divsize)).toFixed();
         var posy = (Math.random() * ($(".tissue-container").height() - divsize)).toFixed();
-        $newdiv = $("<div class=cell-clone></div>").css({
+        $newCell = $("<div class=cell-clone></div>").css({
             'left': posx + 'px',
             'top': posy + 'px'
         });
-    
-        $newdiv.appendTo('.tissue-container').delay(100).fadeIn(50, function () {           
-            makeDiv();
-            setTimeout(function() {
-                $newdiv.remove();
-            }, 10000);             
-        });
-  
-    }, 10000);
+        
+        console.log("newCell", $newCell);
+
+        $newCell.appendTo('.tissue-container');
+
+    }
 
