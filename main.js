@@ -14,6 +14,7 @@ $(document).ready(function(){
         $newCell = $("<div class='cell-clone'></div>").clone().css({
             'left': posx + 'px',
             'top': posy + 'px',
+            
         });
  
         $newCell.appendTo('.tissue-container');
@@ -24,11 +25,16 @@ $(document).ready(function(){
         for(var i = 0; i < 100; i++){
             setTimeout(function timer(){
                 makeCell();
-            }, i * 200);
-            
+            }, i * 80); 
         }           
     }
 
 
 setTimeout( multiplyCell, 11000 );
+
+$(function(){
+        $('.organ').prepend('<img src="images/heart_animated.svg" />').hide().delay(23000).queue(function(n) {
+            $(this).show(); n();
+        })
+    });
 

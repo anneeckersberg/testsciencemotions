@@ -52,10 +52,13 @@
   80% {
     transform: scale(.1);
   }
-
-  100% {
+  90% {
     transform: scale(.1);
     opacity: 1;
+  }
+  100% {
+    transform: scale(.1);
+    opacity: 0;
   }
 }
 
@@ -291,14 +294,21 @@
 .tissue-container {
   background: transparent;
   animation: tissue-color 7s forwards;
-  animation-delay: 24s;
+  animation-delay: 15s;
 }
 
+
 @keyframes tissue-color {
+  90% {
+    opacity: 1;
+  }
+    
   100% {
     background-color:lightblue;
+    opacity: 0;
   }
 }
+
 
 
 
