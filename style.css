@@ -1,11 +1,18 @@
-body {
-  display: block;
+#top {
+  
+}
+
+.wrapper {
+  position: relative;
+  left: 30%;
+  top: 10%;
+  height: 70%;
 }
 
 .cell-clone {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 2px solid #A49480;
   background: blue;
@@ -26,8 +33,8 @@ body {
   position: absolute;
   border-radius: 50%;
   border: 5px solid #A49480;
-  animation: fadeIn 3s forwards;
-  animation-delay: 3s;
+  animation: fadeIn 7s forwards;
+  animation-delay: 5s;
   background: blue;
   background: -webkit-radial-gradient(#73a4ee75, #0742996c);
   background: radial-gradient(#73a4ee75, #0742996c), radial-gradient(transparent, rgba(0, 0, 0, 0.4));
@@ -38,8 +45,12 @@ body {
 }
 
 @keyframes fadeIn {
-  75% {
+  50% {
     transform: scale(1);
+  }
+
+  80% {
+    transform: scale(.1);
   }
 
   100% {
@@ -52,17 +63,23 @@ body {
   position: absolute;
   width: 400px;
   height: 400px;
-  animation: scale 3s forwards;
-  animation-delay: 3s;
+  animation: scale 7s forwards;
+  animation-delay: 5s;
 }
 
 @keyframes scale {
-  75% {
+  50% {
     transform: scale(1);
+  }
+
+  80% {
+    transform: scale(.1);
+    opacity: 1;
   }
 
   100% {
     transform: scale(.1);
+    opacity: 0;
   }
 }
 
@@ -266,8 +283,22 @@ body {
 .tissue-container {
   position: absolute;
   top: 100px;
-  left: 100px;
+  left: 50px;
   width: 500px;
-  height: 500px;
+  height: 300px;
 }
+
+.tissue-container {
+  background: transparent;
+  animation: tissue-color 7s forwards;
+  animation-delay: 24s;
+}
+
+@keyframes tissue-color {
+  100% {
+    background-color:lightblue;
+  }
+}
+
+
 

@@ -11,22 +11,24 @@ $(document).ready(function(){
         var divsize = 50;
         var posx = (Math.random() * ($(".tissue-container").width() - divsize)).toFixed();
         var posy = (Math.random() * ($(".tissue-container").height() - divsize)).toFixed();
-        $newCell = $(".cell:first").clone().css({
+        $newCell = $("<div class='cell-clone'></div>").clone().css({
             'left': posx + 'px',
             'top': posy + 'px',
         });
-        
+ 
         $newCell.appendTo('.tissue-container');
-
     }
+
+
     function multiplyCell(){
-        for(var i = 0; i < 10; i++){
+        for(var i = 0; i < 100; i++){
             setTimeout(function timer(){
                 makeCell();
-            }, i * 1000);
+            }, i * 200);
             
         }           
     }
 
-setTimeout( multiplyCell, 10000 );
+
+setTimeout( multiplyCell, 11000 );
 
