@@ -61,7 +61,6 @@
     opacity: 0;
   }
 }
-
 .organelle-container {
   position: absolute;
   width: 400px;
@@ -266,22 +265,28 @@
   margin: 0 auto;
   border-radius: 50%;
   background: rgb(100, 100, 100);
-  width: 2%;
-  height: 2%;
-  left: 25%;
-  top: 25%;
+  width: 1%;
+  height: 1%;
+  left: 0;
+  top: 0;
   box-shadow: 4px 15px 0 0 rgb(100, 100, 100), 
-  120px 120px 0 0 rgb(100, 100, 100), 
-  150px 15px 0 0 rgb(100, 100, 100), 
-  150px 40px 0 0 rgb(100, 100, 100), 
-  200px 150px 0 0 rgb(100, 100, 100), 
-  2px 80px 0 0 rgb(100, 100, 100), 
-  100px 190px 0 0 rgb(100, 100, 100), 
-  170px 10px 0 0 rgb(100, 100, 100);
-  animation: bobble 5s ease-in-out infinite;
+  90px 200px 0 0 rgb(100, 100, 100), 
+  70px 85px 0 0 rgb(100, 100, 100), 
+  60px 140px 0 0 rgb(100, 100, 100), 
+  95px 170px 0 0 rgb(100, 100, 100), 
+  182px 180px 0 0 rgb(100, 100, 100), 
+  120px 150px 0 0 rgb(100, 100, 100), 
+  195px 10px 0 0 rgb(100, 100, 100);
+  animation: golgiFloat 25s ease-in-out infinite;
   animation-direction: alternate;
-
 }
+
+@keyframes golgiFloat {
+    from { transform: rotate(15deg) translateX(200px) rotate(40deg); }
+    to   { transform: rotate(40deg) translateX(320px) rotate(20deg); }
+  }
+  
+
 
 .tissue-container {
   position: absolute;
