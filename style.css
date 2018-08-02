@@ -325,11 +325,15 @@
 @keyframes tissue-color {
   90% {
     opacity: 1;
+
   }
     
   100% {
-    background-color:lightblue;
+    background-color:lightblue;    
     opacity: 0;
+    transform: scale(1,0.01);
+    transform-origin: 50% 50%;
+
   }
 }
 
