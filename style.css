@@ -129,7 +129,7 @@
 #mito1 {
   top: 200px;
   left: 90px;
-  animation: float1 35s ease-in-out infinite;
+  animation: float1 25s linear infinite;
   animation-direction: alternate;
 }
 
@@ -141,7 +141,7 @@
 #mito2 {
   top: 170px;
   left: 200px;
-  animation: float2 30s ease-in-out infinite;
+  animation: float2 20s linear infinite;
   animation-direction: alternate-reverse;
 }
 
@@ -153,8 +153,8 @@
 #mito3 {
   top: 198px;
   left: 230px;
-  animation: float3 38s ease-in-out infinite;
-  animation-direction: alternate;
+  animation: float3 28s linear infinite;
+  animation-direction: alternate-reverse;
 }
 
 @keyframes float3 {
@@ -174,28 +174,28 @@
   height: 80px;
   top: 108px;
   left: 123px;
-  animation: float3 15s ease-in-out infinite;
+  animation: float3 15s linear infinite;
   animation-direction: alternate-reverse;
 }
 
 #box1 {
   top: 100px;
   left: 150px;
-  animation: float2 25s ease-in-out infinite;
+  animation: float2 18s linear infinite;
   animation-direction: alternate-reverse;
 }
 
 #box2 {
   top: 250px;
   left: 150px;
-  animation: float1 20s ease-in-out infinite;
+  animation: float1 17s linear infinite;
   animation-direction: alternate;
 }
 
 .cytoskeleton-green svg {
   position: absolute;
   margin: 0 auto;
-  animation: float1 35s ease-in-out infinite;
+  animation: float1 27s linear infinite;
   animation-direction: alternate;
 }
 
@@ -209,17 +209,17 @@
 }
 
 .cytoskeleton-blue svg {
-  animation: float3 35s ease-in-out infinite;
+  animation: float3 35s linear infinite;
   animation-direction: alternate;   
   position: absolute;
   margin: 0 auto;
   top: 1px;
-  left: -120px;
+  left: 0px;
 }
 
 .cytoskeleton-blue2 svg {
-  animation: float2 35s ease-in-out infinite;
-  animation-direction: alternate;   
+  animation: float2 35s linear infinite;
+  animation-direction: normal;   
   position: absolute;
   margin: 0 auto;
   top: 150;
@@ -288,24 +288,22 @@
   70px 85px 0 0 rgb(100, 100, 100), 
   60px 140px 0 0 rgb(100, 100, 100), 
   95px 170px 0 0 rgb(100, 100, 100), 
-  182px 180px 0 0 rgb(100, 100, 100), 
+  170px 180px 0 0 rgb(100, 100, 100), 
   120px 150px 0 0 rgb(100, 100, 100), 
   105px 200px 0 0 rgb(100, 100, 100), 
   115px 85px 0 0 rgb(100, 100, 100), 
   200px 140px 0 0 rgb(100, 100, 100), 
-  232px 180px 0 0 rgb(100, 100, 100), 
+  185px 180px 0 0 rgb(100, 100, 100), 
   140px 150px 0 0 rgb(100, 100, 100), 
   195px 10px 0 0 rgb(100, 100, 100);
-  animation: golgiFloat 25s ease-in-out infinite;
+  animation: golgiFloat 25s linear infinite;
   animation-direction: alternate;
 }
 
 @keyframes golgiFloat {
-    from { transform: rotate(15deg) translateX(200px) rotate(40deg); }
-    to   { transform: rotate(40deg) translateX(320px) rotate(20deg); }
+    from { transform: rotate(15deg) translateX(250px) rotate(40deg); }
+    to   { transform: rotate(40deg) translateX(320px) rotate(60deg); }
   }
-  
-
 
 .tissue-container {
   position: absolute;
@@ -323,20 +321,41 @@
 
 
 @keyframes tissue-color {
+  70% {
+    transform: scale(1);
+  }
+  
   90% {
+    background-color:lightblue; 
     opacity: 1;
+    left: 50px;
 
   }
     
-  100% {
-    background-color:lightblue;    
-    opacity: 0;
-    transform: scale(1,0.01);
+  100% {  
+    left: 20px;  
+    transform: scale(0.03,0.03);
     transform-origin: 50% 50%;
-
   }
 }
 
+.organ-system-container {
+  position: relative;
+  top: 54px;
+  left: 200px;
+}
+
+.organ-system {
+  position: absolute;
+  top: -198px;
+  left: -318px;
+}
+
+.organ {
+  position: absolute;
+  top: -198px;
+  left: -317px;
+}
 
 
 

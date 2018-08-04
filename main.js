@@ -33,8 +33,14 @@ $(document).ready(function(){
 setTimeout( multiplyCell, 11000 );
 
 $(function(){
-        $('.organ').prepend('<img src="images/heart_animated.svg" />').hide().delay(23000).queue(function(n) {
+        $('.organ').prepend('<img src="images/heartfinal_animated.svg" />').hide().delay(23000).queue(function(n) {
             $(this).show(); n();
         })
     });
+
+$(function(){
+    $('.organ-system').prepend('<img src="images/organsystemfinal_animated.svg" />').hide().delay(27000).queue(function(n) {
+        $(this).show(); n();
+    })
+});
 
