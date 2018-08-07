@@ -1,8 +1,5 @@
-#top {
-  
-}
-
 .wrapper {
+  max-width: 800px;
   position: relative;
   left: 30%;
   top: 10%;
