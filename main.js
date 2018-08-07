@@ -25,7 +25,7 @@ $(document).ready(function(){
         for(var i = 0; i < 100; i++){
             setTimeout(function timer(){
                 makeCell();
-            }, i * 80); 
+            }, i * 65); 
         }           
     }
 
