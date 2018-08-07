@@ -135,14 +135,14 @@
 
 @keyframes float1 {
   from { transform: rotate(60deg) translateX(60px) rotate(60deg); }
-  to   { transform: rotate(300deg) translateX(60px) rotate(-360deg); }
+  to   { transform: rotate(300deg) translateX(60px) rotate(360deg); }
 }
 
 #mito2 {
   top: 170px;
   left: 200px;
   animation: float2 20s linear infinite;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate;
 }
 
 @keyframes float2 {
@@ -158,8 +158,8 @@
 }
 
 @keyframes float3 {
-  from { transform: rotate(30deg) translateX(100px) rotate(40deg); }
-  to   { transform: rotate(200deg) translateX(100px) rotate(-360deg); }
+  from { transform: rotate(30deg) translateX(100px) rotate(20deg); }
+  to   { transform: rotate(50deg) translateX(100px) rotate(300deg); }
 }
 
 .mitochondria, .lysosome-box, .cytoskeleton-green svg, .cytoskeleton-blue svg, .cytoskeleton-blue2 svg, .nucleus, .golgi {
@@ -196,7 +196,9 @@
   position: absolute;
   margin: 0 auto;
   animation: float1 27s linear infinite;
-  animation-direction: alternate;
+  animation-direction: normal;
+  top: -120px;
+  left: 55px;
 }
 
 
@@ -210,11 +212,11 @@
 
 .cytoskeleton-blue svg {
   animation: float3 35s linear infinite;
-  animation-direction: alternate;   
+  animation-direction: normal;   
   position: absolute;
   margin: 0 auto;
   top: 1px;
-  left: 0px;
+  left: -170px;
 }
 
 .cytoskeleton-blue2 svg {
@@ -327,12 +329,12 @@
   
   90% {
     background-color:lightblue; 
-    opacity: 1;
     left: 50px;
 
   }
     
   100% {  
+    opacity: 1;
     left: 20px;  
     transform: scale(0.03,0.03);
     transform-origin: 50% 50%;
