@@ -39,7 +39,7 @@ $(function(){
     });
 
 $(function(){
-    $('.organ-system').prepend('<img src="images/organsystemfinal_animated.svg" />').hide().delay(27000).queue(function(n) {
+    $('.organ-system').prepend('<img src="images/organsystemfinalslow_animated.svg" />').hide().delay(27000).queue(function(n) {
         $(this).show(); n();
     })
 });
