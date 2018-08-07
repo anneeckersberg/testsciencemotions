@@ -52,15 +52,6 @@
   80% {
     transform: scale(.1);
   }
-  90% {
-    transform: scale(.1);
-    opacity: 1;
-  }
-  
-  95% {
-    transform: scale(.1);
-    opacity: 1;
-  }
   98% {
     transform: scale(.1);
     opacity: 1;
