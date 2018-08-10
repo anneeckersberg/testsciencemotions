@@ -24,13 +24,13 @@ function multiplyCell(){
 setTimeout( multiplyCell, 11000 );
 
 $(function(){
-    $('.organ').prepend('<img src="assets/images/heartfinal_animated.svg" />').hide().delay(22000).queue(function(n) {
+    $('.organ').prepend('<img src="images/heartfinal_animated.svg" />').hide().delay(22000).queue(function(n) {
         $(this).show(); n();
     })
 });
 
 $(function(){
-$('.organ-system').prepend('<img src="assets/images/organsystemfinalslow_animated.svg" />').hide().delay(26000).queue(function(n) {
+$('.organ-system').prepend('<img src="images/organsystemfinalslow_animated.svg" />').hide().delay(26000).queue(function(n) {
     $(this).show(); n();
 })
 });
