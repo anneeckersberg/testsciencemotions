@@ -3,7 +3,7 @@
     height: 700px;
     max-width: 800px;
     position: relative;
-    left: 30%;
+    left: 35%;
     }
   
   .cell-clone {
@@ -292,7 +292,7 @@
   
     .tissue-container {
     position: absolute;
-    top: 100px;
+    top: 200px;
     left: 50px;
     width: 500px;
     height: 300px;
@@ -311,7 +311,7 @@
     90% {
       background-color:lightblue; 
       left: 50px;
-      top: 100px;
+      top: 200px;
     }
       
     100% {  
