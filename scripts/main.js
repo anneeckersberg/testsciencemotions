@@ -20,18 +20,16 @@ function multiplyCell(){
     }           
 }
 
-
+//This starts the multiplication of the cells
 setTimeout( multiplyCell, 11000 );
 
+//This starts drawing the svg-drawings, one after the other
 $(function(){
-    $('.organ').prepend('<img src="images/heartfinal_animated.svg" />').hide().delay(22000).queue(function(n) {
+    $('.organ').hide().delay(22000).queue(function(n) {
         $(this).show(); n();
     })
-});
-
-$(function(){
-$('.organ-system').prepend('<img src="images/organsystemfinalslow_animated.svg" />').hide().delay(26000).queue(function(n) {
-    $(this).show(); n();
-})
+    $('.organ-system').hide().delay(26000).queue(function(n) {
+        $(this).show(); n();
+    })
 });
 
