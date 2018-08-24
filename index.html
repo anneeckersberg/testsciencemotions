@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+
+<html>
 
 <head>
     <meta charset="utf-8">
     <title>Cells, Tissues &amp; Organs</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="scripts/lib/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="scripts/modernizr-2.6.2.min.js"></script>
     <link rel='apple-touch-icon' sizes='57x57' href='/images/favicons/apple-icon-57x57.png'>
     <link rel='apple-touch-icon' sizes='60x60' href='/images/favicons/apple-icon-60x60.png'>
     <link rel='apple-touch-icon' sizes='72x72' href='/images/favicons/apple-icon-72x72.png'>
@@ -21,23 +17,21 @@
     <link rel='apple-touch-icon' sizes='144x144' href='/images/favicons/apple-icon-144x144.png'>
     <link rel='apple-touch-icon' sizes='152x152' href='/images/favicons/apple-icon-152x152.png'>
     <link rel='apple-touch-icon' sizes='180x180' href='/images/favicons/apple-icon-180x180.png'>
-    <link rel='icon' type='image/png' , sizes='192x192' , href='/images/favicons/android-icon-192x192.png'>
-    <link rel='icon' type='image/png' , sizes='32x32' , href='/images/favicons/favicon-32x32.png'>
-    <link rel='icon' type='image/png' , sizes='96x96' , href='/images/favicons/favicon-96x96.png'>
-    <link rel='icon' type='image/png' , sizes='16x16' , href='/images/favicons/favicon-16x16.png'>
+    <link rel='icon' type='image/png' sizes='192x192' href='/images/favicons/android-icon-192x192.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='/images/favicons/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='96x96' href='/images/favicons/favicon-96x96.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='/images/favicons/favicon-16x16.png'>
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-        <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
+            <ul class="nav navbar-nav" role="menubar">
+                <li role="menuitem">
                     <a href="../index.html">Home</a>
                 </li>
-                <li>
+                <li role="menuitem">
                     <a href="../navigation.html">All lessons</a>
                 </li>
             </ul>
@@ -47,13 +41,12 @@
     <div class="container-fluid">
 
         <div class="fond">
-            <div id="forb" style="float:left;" class="style_prevu_kit"></div>
-            <div id="button" style="float:left;" class="button-flip">
-                <a id="button" class="active" href="#text">
-                    <button style="color: #fff; margin-top: 50px;" type="button" class="btn" href="#text">More info</button>
+            <div class="button-flip">
+                <a class="active" href="#text">
+                    <button type="button" class="btn" href="#text">More info</button>
                 </a>
             </div>
-            <div id="forb" style="float:right;" class="style_prevu_kit"></div>
+            
         </div>
 
 
@@ -67,19 +60,19 @@
 
                     <div class="mitochondria" id="mito1">
                         <svg width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10,50 Q10,35 20,30 T30,35 t10,5 10,5 t5,5 15,5" fill="none" stroke=#EE7600 stroke-width="4" />
+                            <path d="M10,50 Q10,35 20,30 T30,35 t10,5 10,5 t5,5 15,5" fill="none" stroke="#EE7600" stroke-width="4" />
                         </svg>
                     </div>
 
                     <div class="mitochondria" id="mito2">
                         <svg width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10,50 Q10,35 20,30 T30,35 t10,5 10,5 t5,5 15,5" fill="none" stroke=#EE7600 stroke-width="4" />
+                            <path d="M10,50 Q10,35 20,30 T30,35 t10,5 10,5 t5,5 15,5" fill="none" stroke="#EE7600" stroke-width="4" />
                         </svg>
                     </div>
 
                     <div class="mitochondria" id="mito3">
                         <svg width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10,50 Q10,35 20,30 T30,35 t10,5 10,5 t5,5 15,5" fill="none" stroke=#EE7600 stroke-width="4" />
+                            <path d="M10,50 Q10,35 20,30 T30,35 t10,5 10,5 t5,5 15,5" fill="none" stroke="#EE7600" stroke-width="4" />
                         </svg>
                     </div>
 
@@ -129,8 +122,12 @@
             </div>
 
             <div class="organ-system-container">
-                <div class="organ"></div>
-                <div class="organ-system"></div>
+                <div class="organ">
+                    <object type="image/svg+xml" data="images/heartfinal_animated.svg"></object>
+                </div>
+                <div class="organ-system">
+                    <object type="image/svg+xml" data="images/organsystemfinalslow_animated.svg"></object>
+                </div>
             </div>
 
         </section>
@@ -152,10 +149,8 @@
     </div>
 
     <!-- End Site Content -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="scripts/lib/jquery-1.9.1.min.js"><\/script>')</script>
-    <script src="main.js"></script>
-    <script src="scripts/oakley.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
