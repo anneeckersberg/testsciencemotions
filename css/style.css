@@ -17,7 +17,7 @@
   padding-bottom: 7%;
   height: 0;
   border-radius: 50%;
-  border: 2px solid #A49480;
+  border: 0.1vw solid #A49480;
   background: blue;
   background: -webkit-radial-gradient(#73a4ee75, #0742996c);
   background: radial-gradient(#73a4ee75, #0742996c), radial-gradient(transparent, rgba(0, 0, 0, 0.4));
@@ -37,7 +37,7 @@
   content: "";
   position: absolute;
   border-radius: 50%;
-  border: 5px solid #A49480;
+  border: 0.4vw solid #A49480;
   animation: fadeIn 7s forwards;
   animation-delay: 5s;
   background: blue;
@@ -101,7 +101,7 @@
   position: absolute;
   margin: 0 auto;
   border-radius: 50%;
-  border: 3px solid rgba(219, 199, 199);
+  border: 0.2vw solid rgba(219, 199, 199);
   background: rgb(187, 100, 114);
   width: 30%;
   height: 30%;
@@ -113,7 +113,7 @@
   position: absolute;
   margin: 0 auto;
   border-radius: 50%;
-  border: 1px solid rgba(255, 0, 0, .2);
+  border: 0.1vw solid rgba(255, 0, 0, .2);
   background: rgb(116, 61, 61);
   width: 25%;
   height: 25%;
@@ -125,7 +125,7 @@
   position: absolute;
   margin: 0 auto;
   border-radius: 100px;
-  border: double white;
+  border: 0.2vw double white;
   background-color: orange;
   width: 10%;
   height: 20%;
@@ -211,6 +211,41 @@
   animation: float1 17s linear infinite alternate;
 }
 
+.lysosome {
+  position: absolute;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 0.2vw solid rgba(255, 0, 0, .2);
+  background: pink;
+  width: 50%;
+  height: 50%;
+}
+
+.lysosome::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 35%;
+  width: 5%;
+  height: 5%;
+  background: red;
+  box-shadow: -7px 5px 0 0 red, 0px 8px 0 0 red, 15px -1px 0 0 red, -9px 12px 0 0 red, 5px -1px 0 0 red, 2px 15px 0 0 red, 11px 8px 0 0 red, 2px -8px 0 0 red;
+  left: 35%;
+  animation-name: floating 3s infinite alternate;
+}
+
+@keyframes floating {
+  100% {
+    box-shadow: 12px 5px 0 0 red, 9px 14px 0 0 red, 17px 9px 0 0 red, 13px 11px 0 0 red, 15px 9px 0 0 red, 7px 11px 0 0 red;
+  }
+  20% {
+    box-shadow: 8px 10px 0 0 red, 7px 5px 0 0 red, 10px 2px 0 0 red, -10px 8px 0 0 red, 8px 6px 0 0 red, 4px 5px 0 0 red;
+  }
+  0% {
+    box-shadow: 8px 10px 0 0 red, 8px 5px 0 0 red, 7px 9px 0 0 red, 2px 3px 0 0 red, 6px 5px 0 0 red, 12px 7px 0 0 red;
+  }
+}
+
 .cytoskeleton-green svg {
   position: absolute;
   margin: 0 auto;
@@ -242,41 +277,6 @@
   top: 150;
   left: -70px;
   transform: scale(.6);
-}
-
-.lysosome {
-  position: absolute;
-  margin: 0 auto;
-  border-radius: 50%;
-  border: 3px solid rgba(255, 0, 0, .2);
-  background: pink;
-  width: 50%;
-  height: 50%;
-}
-
-.lysosome::before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  top: 35%;
-  width: 5%;
-  height: 5%;
-  background: red;
-  box-shadow: -7px 5px 0 0 red, 0px 8px 0 0 red, 15px -1px 0 0 red, -9px 12px 0 0 red, 5px -1px 0 0 red, 2px 15px 0 0 red, 11px 8px 0 0 red, 2px -8px 0 0 red;
-  left: 35%;
-  animation-name: floating 3s infinite alternate;
-}
-
-@keyframes floating {
-  100% {
-    box-shadow: 12px 5px 0 0 red, 9px 14px 0 0 red, 17px 9px 0 0 red, 13px 11px 0 0 red, 15px 9px 0 0 red, 7px 11px 0 0 red;
-  }
-  20% {
-    box-shadow: 8px 10px 0 0 red, 7px 5px 0 0 red, 10px 2px 0 0 red, -10px 8px 0 0 red, 8px 6px 0 0 red, 4px 5px 0 0 red;
-  }
-  0% {
-    box-shadow: 8px 10px 0 0 red, 8px 5px 0 0 red, 7px 9px 0 0 red, 2px 3px 0 0 red, 6px 5px 0 0 red, 12px 7px 0 0 red;
-  }
 }
 
 .golgi {
