@@ -227,21 +227,8 @@
   width: 5%;
   height: 5%;
   background: red;
-  box-shadow: -7px 5px 0 0 red, 0px 8px 0 0 red, 15px -1px 0 0 red, -9px 12px 0 0 red, 5px -1px 0 0 red, 2px 15px 0 0 red, 11px 8px 0 0 red, 2px -8px 0 0 red;
+  box-shadow: 1vh 0.5vw 0 0 red, 0.5vh 0.2vw 0 0 red, 1vh 0.3vw 0 0 red, 0.5vh 0.5vw 0 0 red, 1vh -0.5vw 0 0 red;
   left: 35%;
-  animation-name: floating 3s infinite alternate;
-}
-
-@keyframes floating {
-  100% {
-    box-shadow: 12px 5px 0 0 red, 9px 14px 0 0 red, 17px 9px 0 0 red, 13px 11px 0 0 red, 15px 9px 0 0 red, 7px 11px 0 0 red;
-  }
-  20% {
-    box-shadow: 8px 10px 0 0 red, 7px 5px 0 0 red, 10px 2px 0 0 red, -10px 8px 0 0 red, 8px 6px 0 0 red, 4px 5px 0 0 red;
-  }
-  0% {
-    box-shadow: 8px 10px 0 0 red, 8px 5px 0 0 red, 7px 9px 0 0 red, 2px 3px 0 0 red, 6px 5px 0 0 red, 12px 7px 0 0 red;
-  }
 }
 
 .cytoskeleton-green svg {
@@ -280,11 +267,10 @@
 }
 
 .golgi {
-  position: fixed;
+  position: absolute;
   margin: 20% auto;
   border-radius: 50%;
-  /*background: rgb(100, 100, 100); */
-  background: green;
+  background: rgb(100, 100, 100);
   width: 1%;
   height: 1%;
   box-shadow: 
@@ -297,21 +283,6 @@
   7vh 5vw 0 0 rgb(100, 100, 100),
   6vh 3vw 0 0 rgb(100, 100, 100), 
   3vh 1vw 0 0 rgb(100, 100, 100);
-
-/*  
-  4px 15px 0 0 rgb(100, 100, 100), 
-  90px 70px 0 0 rgb(100, 100, 100), 
-  70px 85px 0 0 rgb(100, 100, 100), 
-  60px 12px 0 0 rgb(100, 100, 100), 
-  17px 39px 0 0 rgb(100, 100, 100), 
-  56px 69px 0 0 rgb(100, 100, 100), 
-  1px 150px 0 0 rgb(100, 100, 100), 
-  77px 200px 0 0 rgb(100, 100, 100), 
-  15px 85px 0 0 rgb(100, 100, 100), 
-  9px 72px 0 0 rgb(100, 100, 100), 
-  20px 0px 0 0 rgb(100, 100, 100), 
-  43px 34px 0 0 rgb(100, 100, 100), 
-  14px 10px 0 0 rgb(100, 100, 100);  */
   animation: golgiFloat 22s linear infinite alternate;
 }
 
