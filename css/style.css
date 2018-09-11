@@ -330,7 +330,12 @@
 }
 
 .organ-system {
+  background-image: url("images/organsystemfinalslow_animated.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   top: 0;
   left: 0;
@@ -339,7 +344,12 @@
 }
 
 .organ {
+  background-image: url("images/heartfinal_animated.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   top: 0;
   left: 0;
