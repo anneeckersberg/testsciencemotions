@@ -315,7 +315,6 @@
     -moz-transform: scale(1);
   }
   90% {
-    background-color: lightblue;
     left: 0;
     top: 0;
   }
