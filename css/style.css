@@ -320,7 +320,7 @@
   }
   100% {
     opacity: 1;
-    left: 0;
+    left: 15%;
     top: 0;
     transform: scale(0.03, 0.03);
     -moz-transform: scale(0.03, 0.03);
